@@ -10,16 +10,28 @@
     
     
 
-    <title>Mario UP!</title>
+    <title>Mario Jump</title>
 </head>
 <body>
 
     <div class="game-board">
-        <img src="/img/clouds.png" class="clouds">
-        <img src="/img/mario.gif" class="mario">
-        <img src="/img/pipe.png" class="pipe">
+        <img src="clouds.png" class="clouds">
+        <img src="mario.gif" class="mario">
+        <img src="pipe.png" class="pipe">
 
     </div>
+
+    <script>
+        const mario = document.querySelectorAll('.mario')[0];
+        const jump = () => {
+            mario.classList.add("jump");
+            setTimeout(()=>{
+                mario.classList.remove('jump');
+            },600);
+        }
+        document.addEventListener('keydown', jump);
+    </script>
     
 </body>
 </html>
+
