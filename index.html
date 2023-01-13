@@ -2,36 +2,30 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="style.css">
-    <script defer src="script.js"></script>
-    
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
 
     <title>Mario Jump</title>
 </head>
 <body>
 
+    <audio src="audios/audio_jump_song.mp3" class="audiojump"></audio>
+    <audio src="audios/audio_game_over.mp3" class="gameover"></audio>
+
     <div class="game-board">
-        <img src="clouds.png" class="clouds">
-        <img src="mario.gif" class="mario">
-        <img src="pipe.png" class="pipe">
+        <img src="/imagens/clouds.png" class="clouds">
+        <img src="/imagens/mario.gif" class="mario">
+        <img src="/imagens/pipe.png" class="pipe">
+    </div> 
 
-    </div>
+    <p id="text-start">Pressione qualquer tecla para jogar</p>
 
-    <script>
-        const mario = document.querySelectorAll('.mario')[0];
-        const jump = () => {
-            mario.classList.add("jump");
-            setTimeout(()=>{
-                mario.classList.remove('jump');
-            },600);
-        }
-        document.addEventListener('keydown', jump);
-    </script>
-    
+
 </body>
 </html>
 
