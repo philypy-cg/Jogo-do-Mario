@@ -33,7 +33,7 @@ const loop = setInterval(() => {
         mario.style.animation = 'none';
         mario.style.bottom = `${marioPosition}px`;
 
-        mario.src = '/imagens/game-over.png';
+        mario.src = './imagens/game-over.png';
         mario.style.width = '75px';
         mario.style.marginLeft = '50px';
 
@@ -42,7 +42,7 @@ const loop = setInterval(() => {
         gameOver.play();
 
         document.getElementById("text-start").style.color = "black";
-        document.getElementById("text-start").innerHTML = "<strong>GAME OVER</strong>";
+        document.getElementById("text-start").innerHTML = "<strong>GAME OVER - F5 para reiniciar o jogo</strong>";
 
         clearInterval(loop);
 
